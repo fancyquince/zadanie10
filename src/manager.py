@@ -71,7 +71,14 @@ class Manager:
         return True
 
     def get_apartment(self, apartment_key: str) -> Apartment | None:
-        """Get an apartment by its key."""
+        """Example:
+        -------
+            >>> params = Parameters()
+            >>> manager = Manager(params)
+            >>> apt = manager.get_apartment("apart-polanka")
+            >>> print(apt.name)
+
+        """
         return self.apartments.get(apartment_key, None)
 
     def get_apartment_costs(
@@ -174,7 +181,15 @@ class Manager:
         return output
 
     def calculate_tax(self, year: int, month: int, tax_rate: float) -> float:
-        """Calculate the tax amount based on the total income from transfers."""
+        """Example:
+        -------
+            >>> params = Parameters()
+            >>> manager = Manager(params)
+            >>> tax = manager.calculate_tax(year=2024, month=1, tax_rate=0.085)
+            >>> print(tax)
+            638.0
+
+        """
         total_income = sum(
             transfer.amount_pln
             for transfer in self.transfers
