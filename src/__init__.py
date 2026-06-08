@@ -45,5 +45,6 @@ Highlights
 Authors
 ------
 Łukasz Kułacz - initial implementation, testing, documentation
+Igor Młynarycz - co-author
 
 """
